@@ -1,0 +1,452 @@
+/* 
+Table of Contents
+
+1. Global Resets
+
+2. Utilities - Supporting styles
+
+3. Components - Stand-alone styles
+
+4. Layouts - Styles for particular sections
+
+5. Pages - Styles for pages
+
+*/
+
+/****** GLOBAL RESETS ******/
+/* fonts */
+@font-face {
+    font-family: abril;
+    src: url(/assets/fonts/AbrilFatface-Regular.28195c14.ttf);
+}
+@font-face {
+    font-family: multi;
+    src: url(/assets/fonts/muli-v20-latin-regular.5fe52d61.ttf);
+}
+@font-face {
+    font-family: multi-bold;
+    src: url(/assets/fonts/muli-v20-latin-900.aff21af5.ttf);
+}
+
+html {
+    font-size: 62.5%; 
+}
+@media (max-width: 75em) {
+    html {
+        font-size: 56.25%; 
+    } 
+}
+@media (max-width: 56.25em) {
+    html {
+        font-size: 50%; 
+    } 
+}
+@media (min-width: 112.5em) {
+    html {
+        font-size: 75%; 
+    } 
+}
+
+body {
+    font-family: multi;
+    font-size: 1.4rem;
+}
+
+/****** UTILITIES ******/
+/* colors */
+.color-white {
+    color: #ffffff !important; 
+}
+
+.color-black {
+    color: #000000 !important; 
+}
+
+.color-green {
+    color: #58a75d !important; 
+}
+
+.bg-white {
+    background-color: #ffffff !important; 
+}
+
+.bg-black {
+    background-color: #000000 !important; 
+}
+
+.bg-green {
+    background-color: #58a75d !important; 
+}
+
+.bg-grey {
+    background-color: #bbbbbb;
+}
+
+.bg-transparent {
+    background-color: transparent !important; 
+}
+
+.primary-header {
+    font-family: multi-bold;
+    font-size: 3rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: .7rem;
+    margin-bottom: 4rem;
+}
+
+.secondary-header {
+    font-family: multi-bold;
+    font-size: 2rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .1rem;
+    margin-bottom: 2rem;
+}
+
+.para {
+    font-family: multi;
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+}
+
+/****** COMPONENTS ******/
+/* nav component */
+.navbar {
+    padding: 2rem;
+}
+
+.navbar-brand {
+    width: 13rem;
+}
+
+@media (max-width: 37.5em) {
+    .navbar-brand {
+        width: 10rem;
+    }
+}
+
+.navbar-nav .nav-item {
+    margin: 0 1rem;
+}
+
+.navbar-nav .nav-item .nav-link,
+.navbar-nav .nav-item a.btn {
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.navbar-nav .nav-item .nav-link {
+    color: #bbbbbb;
+}
+
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item.active .nav-link,
+.navbar-nav .nav-item a {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+@media (max-width: 37.5em) {
+    .navbar {
+        padding: .5rem;
+    }
+    .navbar-nav .nav-item {
+        margin: 0;
+    }
+}
+
+.brand-img {
+    width: 100%;
+}
+
+.card {
+    position: relative;
+    height: 40rem;
+    background-color: unset;
+    overflow: hidden;
+}
+
+.card-heading {
+    font-family: multi-bold;
+    font-size: 2.5rem;
+    font-weight: 600;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+}
+
+.courses-card {
+    color: #ffffff;
+    padding: 4rem;
+    border-radius: 0rem;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    transition: transform .3s linear;
+}
+
+.courses-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.courses-card-overlay {
+    opacity: 0;
+    background-color: skyblue;
+}
+
+.courses-card:hover .courses-card-overlay {
+    opacity: .5;
+}
+
+
+.courses-card-link {
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    left: 10%;
+}
+
+.courses-card-link:focus,
+.courses-card-link:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.courses-card:hover .courses-card-link {
+    transform: translateY(-20%) scale(1.1);
+
+}
+
+.blog-card {
+    height: fit-content;
+    border: none;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+.blog-card-body {
+    padding: 2rem;
+}
+
+.blog-link {
+    color: initial;
+}
+
+.blog-link:focus,
+.blog-link:hover {
+    text-decoration: none;
+    color: initial;
+}
+
+.blog-title {
+    font-family: multi-bold;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: capitalize;
+}
+
+.blog-text {
+    font-size: 1.3rem;
+}
+
+.btn-big {
+    width: 20rem;
+    padding: 2rem;
+    border-radius: .5rem;
+    font-size: 2rem;
+    text-transform: capitalize;
+}
+
+.testimonial-img-container {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.testimonial-img {
+    width: 100%;
+}
+
+.testimonial-text {
+    font-size: 1.8rem;
+    text-align: center;
+    margin: 1.5rem 0;
+}
+
+.testimonial-title {
+    font-family: multi-bold;
+    font-size: 2.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+section {
+    position: relative;
+    padding-top: 8rem;
+    padding-bottom: 6rem;
+}
+
+footer {
+    padding: 4rem 6rem !important;
+}
+
+.footer-header {
+    font-family: multi;
+    font-size: 3.2rem;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 3rem;
+}
+
+.footer-link,
+.footer-text {
+    display: block;
+    font-family: multi;
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: inherit;
+    line-height: 1;
+    text-align: center;
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.footer-link:focus,
+.footer-link:hover {
+    text-decoration: none;
+}
+
+.footer-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-list-item {
+    margin: 1rem 2rem;
+}
+
+.footer-list-link {
+    font-size: 3rem;
+    font-weight: 500;
+    margin: 0;
+}
+
+@media (max-width: 37.5em) {
+    .footer-header {
+        font-size: 2.9rem;
+    }
+    footer .navbar-brand {
+        display: block;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+
+/****** LAYOUTS ******/
+header {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/assets/images/hero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    color: #ffffff;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
+
+.header {
+    height: 60vh;
+}
+
+.hero-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.hero-text-bg {
+    font-family: multi-bold;
+    font-size: 5rem;
+    font-weight: 800;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+    margin-bottom: 1.3rem;
+}
+
+.hero-text-sm {
+    font-family: multi;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: .5rem;
+}
+
+@media (max-width: 37.5em) {
+    .hero-text-bg {
+        font-size: 3.5rem;
+    }
+}
+
+
+/****** PAGES ******/
+.uiux {
+    background-image: url(/assets/images/uiux.jpg);
+}
+
+.web {
+    background-image: url(/assets/images/frontend.jpg);
+}
+
+.mobile {
+    background-image: url(/assets/images/app.jpg);
+}
+
+.blog {
+    background-color: #eeeeee;
+}
+
+/* rudigan page */
+
+.banner {
+    position: relative;
+    background-image: url(/assets/images/uiux.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: #ffffff;
+}
+
+.banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+}
